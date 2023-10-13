@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492F10482AD9ABD800B86190 /* CommentsUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F10472AD9ABD800B86190 /* CommentsUIIntegrationTests.swift */; };
 		4943B01E2AD71072001359C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943B01D2AD71072001359C2 /* AppDelegate.swift */; };
 		4943B0202AD71072001359C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943B01F2AD71072001359C2 /* SceneDelegate.swift */; };
 		4943B0222AD71072001359C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943B0212AD71072001359C2 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		492F10472AD9ABD800B86190 /* CommentsUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIIntegrationTests.swift; sourceTree = "<group>"; };
 		4943B01A2AD71072001359C2 /* EssentialApp_.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp_.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4943B01D2AD71072001359C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4943B01F2AD71072001359C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				4943B0552AD7297F001359C2 /* Helpers */,
 				4943B06E2AD72B8A001359C2 /* SceneDelegateTests.swift */,
 				4943B0722AD72C60001359C2 /* FeedAcceptanceTests.swift */,
+				492F10472AD9ABD800B86190 /* CommentsUIIntegrationTests.swift */,
 				4943B0702AD72BFF001359C2 /* FeedUIIntegrationTests.swift */,
 			);
 			path = EssentialApp_Tests;
@@ -319,6 +322,7 @@
 				4943B0752AD72D11001359C2 /* FeedUIIntegrationTests+Assertions.swift in Sources */,
 				4943B0652AD72ACA001359C2 /* UIControl+TestHelpers.swift in Sources */,
 				4943B05F2AD72A65001359C2 /* ListViewController+TestHelpers.swift in Sources */,
+				492F10482AD9ABD800B86190 /* CommentsUIIntegrationTests.swift in Sources */,
 				4943B0592AD729E4001359C2 /* FeedUIIntegrationTests+LoaderSpy.swift in Sources */,
 				4943B0672AD72AE2001359C2 /* UIImage+TestHelpers.swift in Sources */,
 				4943B06D2AD72B61001359C2 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
