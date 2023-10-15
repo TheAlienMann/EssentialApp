@@ -61,13 +61,13 @@ public extension FeedImageDataLoader {
 extension Publisher where Output == Data {
   func caching(to cache: FeedImageDataCache, using url: URL) -> AnyPublisher<Output, Failure> {
     handleEvents(receiveOutput: { data in
-      cache.saveIgnoreResult(data, for: url)
+      cache.saveIgnoringResult(data, for: url)
     }).eraseToAnyPublisher()
   }
 }
 
-extension FeedImageDataCache {
-  func saveIgnoreResult(_ data: Data, for url: URL) {
+private extension FeedImageDataCache {
+  func saveIgnoringResult(_ data: Data, for url: URL) {
     try? save(data, for: url)
   }
 }
@@ -180,16 +180,15 @@ extension Scheduler {
 }
 
 struct AnyScheduler<SchedulerTimeType: Strideable, SchedulerOptions>: Scheduler where SchedulerTimeType.Stride: SchedulerTimeIntervalConvertible {
-  
   private let _now: () -> SchedulerTimeType
-  private let _minimumTolerace: () -> SchedulerTimeType.Stride
+  private let _minimumTolerance: () -> SchedulerTimeType.Stride
   private let _schedule: (SchedulerOptions?, @escaping () -> Void) -> Void
   private let _scheduleAfter: (SchedulerTimeType, SchedulerTimeType.Stride, SchedulerOptions?, @escaping () -> Void) -> Void
   private let _scheduleAfterInterval: (SchedulerTimeType, SchedulerTimeType.Stride, SchedulerTimeType.Stride, SchedulerOptions?, @escaping () -> Void) -> Cancellable
   
   init<S>(_ scheduler: S) where SchedulerTimeType == S.SchedulerTimeType, SchedulerOptions == S.SchedulerOptions, S: Scheduler {
     _now = { scheduler.now }
-    _minimumTolerace = { scheduler.minimumTolerance }
+    _minimumTolerance = { scheduler.minimumTolerance }
     _schedule = scheduler.schedule(options:_:)
     _scheduleAfter = scheduler.schedule(after:tolerance:options:_:)
     _scheduleAfterInterval = scheduler.schedule(after:interval:tolerance:options:_:)
@@ -197,7 +196,7 @@ struct AnyScheduler<SchedulerTimeType: Strideable, SchedulerOptions>: Scheduler 
   
   var now: SchedulerTimeType { _now() }
   
-  var minimumTolerance: SchedulerTimeType.Stride { _minimumTolerace() }
+  var minimumTolerance: SchedulerTimeType.Stride { _minimumTolerance() }
   
   func schedule(options: SchedulerOptions?, _ action: @escaping () -> Void) {
     _schedule(options, action)

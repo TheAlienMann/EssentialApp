@@ -529,30 +529,30 @@ class FeedUIIntegrationTests: XCTestCase {
     wait(for: [exp], timeout: 1.0)
   }
   
-  func test_feedImageView_doesNotLoadImageAgainUntilPrevousRequestCompletes() {
+  func test_feedImageView_doesNotLoadImageAgainUntilPreviousRequestCompletes() {
     let image = makeImage(url: URL(string: "http://url-0.com")!)
     let (sut, loader) = makeSUT()
     sut.loadViewIfNeeded()
     loader.completeFeedLoading(with: [image])
     
     sut.simulateFeedImageViewNearVisible(at: 0)
-    XCTAssertEqual(loader.loadedImageURLs, [image.url], "Expected first request when near visible.")
+    XCTAssertEqual(loader.loadedImageURLs, [image.url], "Expected first request when near visible")
     
     sut.simulateFeedImageViewVisible(at: 0)
-    XCTAssertEqual(loader.loadedImageURLs, [image.url], "Expected no request until previous completes.")
+    XCTAssertEqual(loader.loadedImageURLs, [image.url], "Expected no request until previous completes")
     
-    loader.completeFeedLoading(at: 0)
+    loader.completeImageLoading(at: 0)
     sut.simulateFeedImageViewVisible(at: 0)
-    XCTAssertEqual(loader.loadedImageURLs, [image.url, image.url], "Expected second request when visible after previous complete.")
+    XCTAssertEqual(loader.loadedImageURLs, [image.url, image.url], "Expected second request when visible after previous complete")
     
     sut.simulateFeedImageViewNotVisible(at: 0)
     sut.simulateFeedImageViewVisible(at: 0)
-    XCTAssertEqual(loader.loadedImageURLs, [image.url, image.url, image.url], "Expected thrird request when visible after cancelling previous complete.")
+    XCTAssertEqual(loader.loadedImageURLs, [image.url, image.url, image.url], "Expected third request when visible after canceling previous complete")
     
     sut.simulateLoadMoreFeedAction()
     loader.completeLoadMore(with: [image, makeImage()])
     sut.simulateFeedImageViewVisible(at: 0)
-    XCTAssertEqual(loader.loadedImageURLs, [image.url, image.url, image.url], "Expected no request until previous completes.")
+    XCTAssertEqual(loader.loadedImageURLs, [image.url, image.url, image.url], "Expected no request until previous completes")
   }
   
   // MARK: - Helpers
