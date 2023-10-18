@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		492F10482AD9ABD800B86190 /* CommentsUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F10472AD9ABD800B86190 /* CommentsUIIntegrationTests.swift */; };
+		492F116F2AE0606100B86190 /* EssentialFeed in Frameworks */ = {isa = PBXBuildFile; productRef = 492F116E2AE0606100B86190 /* EssentialFeed */; };
+		492F11722AE069B400B86190 /* EssentialFeediOS in Frameworks */ = {isa = PBXBuildFile; productRef = 492F11712AE069B400B86190 /* EssentialFeediOS */; };
 		4943B01E2AD71072001359C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943B01D2AD71072001359C2 /* AppDelegate.swift */; };
 		4943B0202AD71072001359C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943B01F2AD71072001359C2 /* SceneDelegate.swift */; };
 		4943B0222AD71072001359C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943B0212AD71072001359C2 /* ViewController.swift */; };
 		4943B0272AD71075001359C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4943B0262AD71075001359C2 /* Assets.xcassets */; };
 		4943B02A2AD71075001359C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4943B0282AD71075001359C2 /* LaunchScreen.storyboard */; };
-		4943B0442AD7134E001359C2 /* EssentialFeed in Frameworks */ = {isa = PBXBuildFile; productRef = 4943B0432AD7134E001359C2 /* EssentialFeed */; };
-		4943B0462AD7134E001359C2 /* EssentialFeediOS in Frameworks */ = {isa = PBXBuildFile; productRef = 4943B0452AD7134E001359C2 /* EssentialFeediOS */; };
 		4943B0482AD713D4001359C2 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943B0472AD713D4001359C2 /* CombineHelpers.swift */; };
 		4943B04A2AD7175D001359C2 /* CommentsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943B0492AD7175D001359C2 /* CommentsUIComposer.swift */; };
 		4943B04C2AD7242A001359C2 /* WeakRefVirturalProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943B04B2AD7242A001359C2 /* WeakRefVirturalProxy.swift */; };
@@ -61,8 +61,6 @@
 		4943B02B2AD71075001359C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4943B0352AD710A8001359C2 /* EssentialApp_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialApp_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4943B03E2AD710DC001359C2 /* EssentialApp_UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialApp_UnitTests.xctestplan; sourceTree = "<group>"; };
-		4943B0402AD7131D001359C2 /* EssentialFeed */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EssentialFeed; path = ../EssentialFeed; sourceTree = "<group>"; };
-		4943B0412AD71333001359C2 /* EssentialFeediOS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EssentialFeediOS; path = ../EssentialFeediOS; sourceTree = "<group>"; };
 		4943B0472AD713D4001359C2 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		4943B0492AD7175D001359C2 /* CommentsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIComposer.swift; sourceTree = "<group>"; };
 		4943B04B2AD7242A001359C2 /* WeakRefVirturalProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirturalProxy.swift; sourceTree = "<group>"; };
@@ -93,8 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4943B0442AD7134E001359C2 /* EssentialFeed in Frameworks */,
-				4943B0462AD7134E001359C2 /* EssentialFeediOS in Frameworks */,
+				492F116F2AE0606100B86190 /* EssentialFeed in Frameworks */,
+				492F11722AE069B400B86190 /* EssentialFeediOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +109,6 @@
 		4943B0112AD71072001359C2 = {
 			isa = PBXGroup;
 			children = (
-				4943B03F2AD7131D001359C2 /* Packages */,
 				4943B03E2AD710DC001359C2 /* EssentialApp_UnitTests.xctestplan */,
 				4943B01C2AD71072001359C2 /* EssentialApp_ */,
 				4943B0362AD710A8001359C2 /* EssentialApp_Tests */,
@@ -161,15 +158,6 @@
 			path = EssentialApp_Tests;
 			sourceTree = "<group>";
 		};
-		4943B03F2AD7131D001359C2 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				4943B0402AD7131D001359C2 /* EssentialFeed */,
-				4943B0412AD71333001359C2 /* EssentialFeediOS */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		4943B0422AD7134E001359C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,8 +202,8 @@
 			);
 			name = EssentialApp_;
 			packageProductDependencies = (
-				4943B0432AD7134E001359C2 /* EssentialFeed */,
-				4943B0452AD7134E001359C2 /* EssentialFeediOS */,
+				492F116E2AE0606100B86190 /* EssentialFeed */,
+				492F11712AE069B400B86190 /* EssentialFeediOS */,
 			);
 			productName = EssentialApp_;
 			productReference = 4943B01A2AD71072001359C2 /* EssentialApp_.app */;
@@ -267,6 +255,10 @@
 				Base,
 			);
 			mainGroup = 4943B0112AD71072001359C2;
+			packageReferences = (
+				492F116D2AE0606000B86190 /* XCRemoteSwiftPackageReference "EssentialFeed" */,
+				492F11702AE060BA00B86190 /* XCRemoteSwiftPackageReference "EssentialFeediOS" */,
+			);
 			productRefGroup = 4943B01B2AD71072001359C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -538,6 +530,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RSW6ZAWD52;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TheAlienMann.EssentialApp-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,6 +549,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RSW6ZAWD52;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TheAlienMann.EssentialApp-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -598,13 +592,34 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		492F116D2AE0606000B86190 /* XCRemoteSwiftPackageReference "EssentialFeed" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TheAlienMann/EssentialFeed";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		492F11702AE060BA00B86190 /* XCRemoteSwiftPackageReference "EssentialFeediOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TheAlienMann/EssentialFeediOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		4943B0432AD7134E001359C2 /* EssentialFeed */ = {
+		492F116E2AE0606100B86190 /* EssentialFeed */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 492F116D2AE0606000B86190 /* XCRemoteSwiftPackageReference "EssentialFeed" */;
 			productName = EssentialFeed;
 		};
-		4943B0452AD7134E001359C2 /* EssentialFeediOS */ = {
+		492F11712AE069B400B86190 /* EssentialFeediOS */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 492F11702AE060BA00B86190 /* XCRemoteSwiftPackageReference "EssentialFeediOS" */;
 			productName = EssentialFeediOS;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "essentialfeed",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TheAlienMann/EssentialFeed",
+      "state" : {
+        "branch" : "main",
+        "revision" : "393593d257327cae0f5c39d78d88d5be995afe76"
+      }
+    },
+    {
+      "identity" : "essentialfeedios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TheAlienMann/EssentialFeediOS",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d7140652429f7e54c5b42b90513f0a5b75d58fdc"
+      }
+    }
+  ],
+  "version" : 2
+}
