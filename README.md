@@ -18,9 +18,18 @@
 
 * Everything is cool, up until you need to do the UI part and/or have a CoreData model in your project. SourceKit-lsp doesn't support UIKit, since, well obviously, the UIKit isn't open source. Here you need to get back to xcode.
 
-* Having a CoreData model in your project (oh man 🤦‍♂️). In this case you need to create the model in a separate project, an xcode supported project, setup the entities, the configurations etc, then import (copy the file over) it to your package. This is not the only headache you'd face. You need to put the model file in a directory at the root of the source code (Resources directory). 
+* Having a CoreData model in your project (oh man 🤦‍♂️). In this case you need to create the model in a separate project, an xcode supported project, setup the entities, the configurations etc, then import (copy the file over) it to your package. This is not the only headache you'd face. You need to put the model file in a directory at the root of the source code (Resources directory). That's not all (), in case of accessing the model, you need to call `Bundle.module`, you can find a detailed explanation about here in the [doc](https://developer.apple.com/documentation/xcode/bundling-resources-with-a-swift-package#Access-a-resource-in-code). This issue is still true for Localization and Asserts. (you need to have the asserts and localized strings files in the Resources directory.)
 
 * Obviously, you don't have vim, anymore (yeah, you have some sort of a vim in xcode, which I just call it baby-vim, I have posted about it quite a few times on LinkedIn).
 
 ### Second, doing the UI in code (programmatically per say) in UIKit, instead of Storyboard which was used originally.
+
+The fun part!
+
+#### Pros
+* For some reason, Swift Package doesn't support storyboard. 
+
+#### Cons
+
+
 
