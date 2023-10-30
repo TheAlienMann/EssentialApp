@@ -18,5 +18,5 @@
 * Obviously, you don't have vim, anymore (yeah, you have some sort of a vim in xcode, which I just call it baby-vim).
 
 * Everything is cool, up until you need to do the UI part. SourceKit-lsp doesn't support UIKit since, well obviously, the UIKit isn't open source. Here you need to get back to xcode.
-### second, doing the UI in codee (programmatically per say) in UIKit.
+### Second, doing the UI in code (programmatically per say) in UIKit.
 
