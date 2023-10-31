@@ -26,8 +26,10 @@
 
 The fun part!
 
+For some reason, Swift Package doesn't support storyboard. I mean you do can have a storyboard and setup all your UI components there, but the problem is that you can't call it (or maybe that is what I have experienced.), you do can though setup the UIs in xib files, and just call them the way you'd    
+
 #### Pros
-* For some reason, Swift Package doesn't support storyboard. 
+*  
 
 #### Cons
 
