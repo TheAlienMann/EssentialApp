@@ -26,7 +26,11 @@
 
 The fun part!
 
-For some reason, Swift Package doesn't support storyboard. I mean you do can have a storyboard and setup all your UI components there, but the problem is that you can't call it (or maybe that is what I have experienced.), you do can though setup the UIs in xib files, and just call them the way you'd    
+For some reason, Swift Package doesn't support storyboard. I mean you do can have a storyboard and setup all your UI components there, but the problem is that you can't call it (or maybe that is what I have experienced.), you do can though setup the UIs in xib files, and just call them the way you'd call a CoreData model or a Localized string file.
+
+For these reasons, and also since I just love to do the UIs in code, I decided to go on with doing the UI in code.
+
+They use a storyboard in the original project as a container-like or generic one (per say) to reuse it for both the `Feed` as well as the `CommentsImage` views (storyboards). Both of them are backed by `ListViewController` as their controller. So, since I am doing the UI in code, I made the `ListViewController` generic which takes a generic `T` of type `UITableViewCell`. And since it (the controller) needs to register the required tableView with a cell, I added an initializer to it, problem solved, two storyboards eliminated. Next, prefetchDataSource was setup in the storyboard before, now you need to configure it in code.
 
 #### Pros
 *  
