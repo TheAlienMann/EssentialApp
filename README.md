@@ -18,7 +18,7 @@
 
 * Everything is cool, up until you need to do the UI part and/or have a CoreData model in your project. SourceKit-lsp doesn't support UIKit, since, well obviously, the UIKit isn't open source. Here you need to get back to xcode.
 
-* Having a CoreData model in your project (oh man 🤦‍♂️). In this case you need to create the model in a separate project, an xcode supported project, setup the entities, the configurations etc, then import (copy the file over) it to your package. This is not the only headache you'd face. You need to put the model file in a directory at the root of the source code (Resources directory). That's not all (😂), in case of accessing the model, you need to call `Bundle.module`, you can find a detailed explanation about here in the [doc](https://developer.apple.com/documentation/xcode/bundling-resources-with-a-swift-package#Access-a-resource-in-code). This issue is still true for Localization and Asserts. (you need to have the asserts and localized strings files in the Resources directory.)
+* Having a CoreData model in your project (oh man 🤦‍♂️). In this case you need to create the model in a separate project, an xcode supported project, setup the entities, the configurations etc, then import (copy the file over) it to your package. This is not the only headache you'd face. You need to put the model file in a directory at the root of the source code (Resources directory). That's not all (😂), in case of accessing the model, you need to call `Bundle.module`, you can find a detailed explanation about here in the [doc](https://developer.apple.com/documentation/xcode/bundling-resources-with-a-swift-package#Access-a-resource-in-code). This issue is still true for Localization and Assets. (you need to have the assets and localized strings files in the Resources directory.)
 
 * Obviously, you don't have vim, anymore (yeah, you have some sort of a vim in xcode, which I just call it baby-vim, I have posted about it quite a few times on LinkedIn).
 
@@ -38,3 +38,9 @@ Sometimes, it is pretty hard to replicate UI components, since there are details
 Here, you'll find the `EssentialFeed`, which stands as the Core (or Model, in the 3 layer architecture) [Essential Feed](https://github.com/TheAlienMann/EssentialFeed) as a Swift Package.
 
 Also, here you'll find the `EssentialiOS` part of the project, as a Swift Package, which stands as the Presentation layer. [Essential iOS](https://github.com/TheAlienMann/EssentialFeediOS).
+
+Note, there might be some details that I have forgotten to add, will update this.
+
+
+Ah, here is the original project, [EssentialApp](https://github.com/essentialdevelopercom/essential-feed-case-study)
+Thank you, Essential Developer for making this project available. 🙏
