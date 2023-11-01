@@ -18,7 +18,7 @@
 
 * Everything is cool, up until you need to do the UI part and/or have a CoreData model in your project. SourceKit-lsp doesn't support UIKit, since, well obviously, the UIKit isn't open source. Here you need to get back to xcode.
 
-* Having a CoreData model in your project (oh man 🤦‍♂️). In this case you need to create the model in a separate project, an xcode supported project, setup the entities, the configurations etc, then import (copy the file over) it to your package. This is not the only headache you'd face. You need to put the model file in a directory at the root of the source code (Resources directory). That's not all (), in case of accessing the model, you need to call `Bundle.module`, you can find a detailed explanation about here in the [doc](https://developer.apple.com/documentation/xcode/bundling-resources-with-a-swift-package#Access-a-resource-in-code). This issue is still true for Localization and Asserts. (you need to have the asserts and localized strings files in the Resources directory.)
+* Having a CoreData model in your project (oh man 🤦‍♂️). In this case you need to create the model in a separate project, an xcode supported project, setup the entities, the configurations etc, then import (copy the file over) it to your package. This is not the only headache you'd face. You need to put the model file in a directory at the root of the source code (Resources directory). That's not all (😂), in case of accessing the model, you need to call `Bundle.module`, you can find a detailed explanation about here in the [doc](https://developer.apple.com/documentation/xcode/bundling-resources-with-a-swift-package#Access-a-resource-in-code). This issue is still true for Localization and Asserts. (you need to have the asserts and localized strings files in the Resources directory.)
 
 * Obviously, you don't have vim, anymore (yeah, you have some sort of a vim in xcode, which I just call it baby-vim, I have posted about it quite a few times on LinkedIn).
 
@@ -32,10 +32,9 @@ For these reasons, and also since I just love to do the UIs in code, I decided t
 
 They use a storyboard in the original project as a container-like or generic one (per say) to reuse it for both the `Feed` as well as the `CommentsImage` views (storyboards). Both of them are backed by `ListViewController` as their controller. So, since I am doing the UI in code, I made the `ListViewController` generic which takes a generic `T` of type `UITableViewCell`. And since it (the controller) needs to register the required tableView with a cell, I added an initializer to it, problem solved, two storyboards eliminated. Next, prefetchDataSource was setup in the storyboard before, now you need to configure it in code.
 
-#### Pros
-*  
-
-#### Cons
+Sometimes, it is pretty hard to replicate UI components, since there are details you might miss, in this case the `Snapshot tests` did help alot. After finishing up the UI, I copied the taken screenshots from the original project over to mine and ran the Snapshot tests, they all passed (🥳). Like I once said, the importance of UI testing and Snapshot testing, in general, is about to rely on the engine to examine your UI, instead of relying on a human-eye!
 
 
+Here, you'll find the `EssentialFeed`, which stands as the Core (or Model, in the 3 layer architecture) [Essential Feed](https://github.com/TheAlienMann/EssentialFeed) as a Swift Package.
 
+Also, here you'll find the `EssentialiOS` part of the project, as a Swift Package, which stands as the Presentation layer. [Essential iOS](https://github.com/TheAlienMann/EssentialFeediOS).
